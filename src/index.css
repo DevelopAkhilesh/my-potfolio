@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --gradient-start: #dbeafe; 
+    --gradient-middle: #bfdbfe; 
+    --gradient-end: #93c5fd; 
+  }
+  
+.dark {
+    --gradient-start: #172554; 
+    --gradient-middle: #1e3a8a; 
+    --gradient-end: #312e81; 
+  }
+  
+  
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, 
+      var(--gradient-start), 
+      var(--gradient-middle), 
+      var(--gradient-end));
+    transition: background-color 0.3s ease;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
